@@ -8693,7 +8693,7 @@ footer .footer_bottom .footer_link {
 }
 
 body {
-  font-family: 'Proxima Nova';
+  font-family: 'Proxima Nova', sans-serif;
 }
 
 .navbar-light .navbar-toggler {

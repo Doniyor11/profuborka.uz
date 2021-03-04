@@ -130,7 +130,7 @@ const swiper3 = new Swiper('.reviews-slider', {
 
 // карта
 document.addEventListener('click', function (e) {
-    let map = document.querySelector('#map-wrap iframe')
+    var map = document.querySelector('#map-wrap iframe')
     if (e.target.id === 'map-wrap') {
         map.style.pointerEvents = 'all'
     } else {
