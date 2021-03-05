@@ -130,10 +130,37 @@ const swiper3 = new Swiper('.reviews-slider', {
 
 // карта
 document.addEventListener('click', function (e) {
-    var map = document.querySelector('#map-wrap iframe')
+    let map = document.querySelector('#map-wrap iframe')
     if (e.target.id === 'map-wrap') {
         map.style.pointerEvents = 'all'
     } else {
         map.style.pointerEvents = 'none'
     }
+})
+
+
+
+document.addEventListener('DOMContentLoaded', () => { // Структура страницы загружена и готова к взаимодейтсвию
+
+    const mobile = () => { // объявляем основную функцию, чтобы вся логика мобильной навигации находилась в одном месте
+
+        const menu = document.querySelector('#navbar-toggler') // находим кнопку Menu
+
+        const mobile = document.querySelector('.menu-mobile') // находим блок мобильной навигации
+        // console.log(menmobileu)
+        menu.addEventListener('click', () => { // при клике на кнопку Menu
+            if (!mobile.classList.contains('menu-mobile-active')) { // если мобильная навигация еще не содержит класс mobile_active, то есть не активна
+                mobile.classList.add('menu-mobile-active') // показываем навигацию, добавляя класс mobile_active со свойством display: bloсk;
+                // menu.classList.add('button_active') - здесь можно добавить активный класс для элемента управления
+            } else { // а если мобильная навигация уже имеет класс mobile_active, то есть активно
+                mobile.classList.remove('menu-mobile-active') // скрываем навигацию, удаляя класс mobile_active со свойством display: bloсk;
+                // menu.classList.remove('button_active') здесь можно удалить активный класс для элемента управления
+            }
+        })
+
+    }
+
+    mobile() // вызываем основную функцию
+
+
 });
