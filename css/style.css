@@ -6772,16 +6772,36 @@ fieldset:disabled .btn {
 .header .menu-mobile {
   position: absolute;
   width: 100%;
-  height: 300px;
-  background: rgba(0, 0, 0, 0.75);
+  background: #fff;
   visibility: hidden;
-  -webkit-transition: 0.5s ease-in all;
-  -o-transition: 0.5s ease-in all;
-  transition: 0.5s ease-in all;
+  -webkit-transition: 0.2s ease-in all;
+  -o-transition: 0.2s ease-in all;
+  transition: 0.2s ease-in all;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding-top: 10px;
+}
+
+.header .menu-mobile .navbar-nav {
+  padding: 10px 20px 10px 20px;
+}
+
+.header .menu-mobile .navbar-nav .nav-item {
+  margin-bottom: 30px;
+}
+
+.header .menu-mobile .navbar-nav .nav-item .nav-link {
+  font-size: 16px;
+  line-height: 16px;
+  color: #000000;
+  padding: 0;
 }
 
 .header .menu-mobile-active {
   visibility: visible;
+  -webkit-transition: 5s ease-in all;
+  -o-transition: 5s ease-in all;
+  transition: 5s ease-in all;
 }
 
 .main-section {
@@ -6795,7 +6815,6 @@ fieldset:disabled .btn {
 }
 
 .main-section .main-section-text .main-section-title {
-  max-width: 540px;
   font-weight: 800;
   font-size: 48px;
   line-height: 120%;
